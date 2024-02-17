@@ -23,6 +23,9 @@ btn.addEventListener("click",()=>
     </p>
     <p class="word-example"> ${text[0].meanings[0].definitions[0].example||""}</p>`;
     sound.setAttribute("src",`${text[0].phonetics[0].audio}`);
+   })
+   .catch(()=>{
+    result.innerHTML=`<h3 class="error"> Couldn't find the word </h3>`;
    });
 });
 function playSound()
